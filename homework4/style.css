@@ -1,0 +1,17 @@
+nav {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    display: block;
+  }
+}
+
+section:nth-child(3) > .container > .row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+/*# sourceMappingURL=style.css.map */
