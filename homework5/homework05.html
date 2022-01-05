@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/resect.css">
+    <link rel="stylesheet" href="/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <style>
+        .sr-only {
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .icon {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45px;
+            height: 45px;
+            color: #c0c7d2;
+            border: 1px solid #c0c7d2;
+            border-radius: 50%;
+            background-color: transparent;
+            text-decoration: none;
+            transition: .5s;
+        }
+
+        .icon:hover {
+            color: #fff;
+            background-color: #1fde82;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-md">
+                <a href="#">
+                    <h1>
+                        <span class="sr-only">maikon</span>
+                        <img class="navbar-brand" src="/homework4/HTMLhomework4/logo.webp" alt="maikon">
+                    </h1>
+                </a>
+                <button class="btn btn-primary navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"> <span class="navbar-toggler-icon"></span></button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
+                    aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <p id="offcanvasRightLabel"></p>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Case studio</a>
+                            </li>
+                            <li class="nav-item me-0">
+                                <a class="nav-link active" aria-current="page" href="#">Contacts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="me-0">
+                        <a href="#" class="text-decoration-none btn btn-outline-dark text-uppercase fw-bold">SUBSCRIBE</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="container-md">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center">
+                <div class="col">
+                    <div class="row my-4">
+                        <div class="col-12">
+                            <div>
+                                <h2 class="fs-1">Our creativity is your success</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div>
+                                <p>We break all boundaries if they happen on our way of project's development!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2 align-items-center">
+                        <div class="col-6 col-md-3">
+                            <a class="text-decoration-none text-uppercase btn btn-success fw-bold" href="#">Learn
+                                more</a>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <a class="text-decoration-none text-uppercase text-black fw-bold" href="#">Watch video</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="success-pic">
+                        <img class="" src="/homework4/HTMLhomework4/home-image-1.svg" alt="success">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-md">
+            <div class="row row-cols-md-2 align-items-center flex-row-reverse flex-wrap-reverse">
+                <div class="col">
+                    <div class="row my-4">
+                        <div class="col-12">
+                            <div>
+                                <h2 class="fs-1">Creative challenges are our passion</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div>
+                                <p>Our team of designers and developers work closely together to build a creative and
+                                    positive working environment. Functionality is as important to us as aesthetics.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-6 col-md-3">
+                            <a class="text-decoration-none btn btn-success text-uppercase fw-bold" href="#">About us</a>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <a class="text-decoration-none btn btn-outline-dark text-uppercase fw-bold" href="#">Contact
+                                us</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="passion-pic ">
+                        <img class="" src="/homework4/HTMLhomework4/home-image-2.webp" alt="passion">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-md">
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div>
+                        <h2 class="fs-1">We provide a wide range of creative services</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 my-1">
+                <div class="col my-3">
+                    <div class="card h-100">
+                        <div>
+                            <img src="/homework4/HTMLhomework4/icon-1.svg" class="card-img-top w-25 my-4"
+                                alt="Design & Brending">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-bold">Web Design & Brending</h3>
+                            <p class="card-text my-4">A great brand combines design and conveys company’s value
+                                messaging to
+                                evoke emotion and drive strategy.</p>
+                            <a href="#" class="text-decoration-none text-uppercase text-black mt-auto fw-bolder">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card h-100">
+                        <div>
+                            <img src="/homework4/HTMLhomework4/icon-2.svg" class="card-img-top w-25 my-4" alt="...">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-bold">Graphic Design</h3>
+                            <p class="card-text my-4">Rich experience plus unlimited imagination create our
+                                successful service discovered by clients.</p>
+                            <a href="#" class="text-decoration-none text-uppercase text-black mt-auto fw-bolder">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card h-100">
+                        <div>
+                            <img src="/homework4/HTMLhomework4/icon-3.svg" class="card-img-top w-25 my-4" alt="...">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-bold">Video Production</h3>
+                            <p class="card-text my-4">Creating and handling professional video is our strong point.
+                                It plays major role in your digital business strategy.</p>
+                            <a href="#" class="text-decoration-none text-uppercase text-black mt-auto fw-bolder">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card h-100">
+                        <div>
+                            <img src="/homework4/HTMLhomework4/icon-4.svg" class="card-img-top w-25 my-4" alt="...">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-bold">SEO</h3>
+                            <p class="card-text my-4">We provide everything your site needs to perform at it’s
+                                highest capabilities on the major search engines.</p>
+                            <a href="#" class="text-decoration-none text-uppercase text-black mt-auto fw-bolder">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card h-100">
+                        <div>
+                            <img src="/homework4/HTMLhomework4/icon-5.svg" class="card-img-top w-25 my-4" alt="...">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-bold">Digital Marketing</h3>
+                            <p class="card-text my-4">We do collateral design, interactive design, hoarding, signage,
+                                presentation centres, and more.</p>
+                            <a href="#" class="text-decoration-none text-uppercase text-black mt-auto fw-bolder">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card h-100">
+                        <div>
+                            <img src="/homework4/HTMLhomework4/icon-6.svg" class="card-img-top w-25 my-4" alt="...">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title fw-bold">Infographics</h3>
+                            <p class="card-text my-4">Turn your data into captivating artwork that will keep your
+                                audience engaged. Our team can help you with it.</p>
+                            <a href="#" class="text-decoration-none text-uppercase text-black mt-auto fw-bolder">Read
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-md">
+            <div class="contact row row-cols-md-2 align-items-center">
+                <div class="contact-info col">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="my-4">
+                                <h2 class="fs-1">If you have any questions,please contact us</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div>
+                                <p>Our professional support team try to do their best to provide you with high-quality
+                                    consultations concerning any question about our services.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2 align-items-center">
+                        <div class="col-6 col-md-3">
+                            <a class="text-decoration-none text-uppercase btn btn-success fw-bolder" href="#">Contact
+                                us</a>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <button type="button"
+                                class="btn btn-outline-dark text-uppercase fw-bolder">subscribe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-4">
+                    <div class="text-end">
+                        <img src="/homework4/HTMLhomework4/home-image-3.svg" alt="success">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-primary">
+        <div class="container-md ">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center text-white">
+                <div class="col my-3">
+                    <div class="row row-cols-1 row-cols-md-2">
+                        <div class="col my-2 text-center">
+                            <div class="card h-100 bg-white bg-opacity-25">
+                                <p class="fs-1 mt-3">1880+</p>
+                                <p class="px-3">Completed projects to the end by our specialists.</p>
+                            </div>
+                        </div>
+                        <div class="col my-2 text-center">
+                            <div class="card h-100 bg-white bg-opacity-25">
+                                <p class="fs-1 mt-3">56</p>
+                                <p class="px-3">A large team of the best specialists.</p>
+                            </div>
+                        </div>
+                        <div class="col my-2 text-center">
+                            <div class="card h-100 bg-white bg-opacity-25">
+                                <p class="fs-1 mt-3">2000+</p>
+                                <p class="px-3">Customers who were satisfied with our work.</p>
+                            </div>
+                        </div>
+                        <div class="col my-2 text-center">
+                            <div class="card h-100 bg-white bg-opacity-25">
+                                <p class="fs-1 mt-3">100%</p>
+                                <p class="px-3">Our values are good organization and result orientation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row my-3">
+                        <div class="col-12">
+                            <div class="">
+                                <h2>Why choose our studio for your projects?</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-3">
+                        <div class="col-12">
+                            <div class="">
+                                <p class="">We are a command of professional and enthusiastic people, who like
+                                    what they do and are always in the process of growing and improving their skills.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-12 col-md-12">
+                            <a href="#" class="btn btn-outline-light fw-bolder text-uppercase">Order service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container-md">
+            <div class="row fs-1">
+                <div class="col-12">
+                    <div class="mt-4">
+                        <p>Steps of our work</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-wrap-reverse align-items-center">
+                <div class="col-12 col-md-4">
+                    <div class="my-3 text-md-end">
+                        <img src="/homework4/HTMLhomework4/home-image-4.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <div class="my-2 text-md-end">
+                                <img src="/homework4/HTMLhomework4/number-01.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <div class="my-2">
+                                <h3>Meeting With The Customer</h3>
+                            </div>
+                            <div class="my-2">
+                                <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                    project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-row-reverse flex-wrap-reverse align-items-center ">
+                <div class="col-12 col-md-4">
+                    <div class="my-3">
+                        <img src="/homework4/HTMLhomework4/home-image-5.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        <div class="col-12 col-md-5">
+                            <div class="my-2 text-md-end">
+                                <img src="/homework4/HTMLhomework4/number-02.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <div class="my-2">
+                                <h3>Meeting With The Customer</h3>
+                            </div>
+                            <div class="my-2">
+                                <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                    project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-wrap-reverse align-items-center">
+                <div class="col-12 col-md-4">
+                    <div class="my-3 text-md-end">
+                        <img src="/homework4/HTMLhomework4/home-image-6.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="my-2 text-md-end">
+                                <img src="/homework4/HTMLhomework4/number-03.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <div class="my-2">
+                                <h3>Meeting With The Customer</h3>
+                            </div>
+                            <div class="my-2">
+                                <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                    project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-row-reverse flex-wrap-reverse align-items-center">
+                <div class="col-12 col-md-5">
+                    <div class="my-3">
+                        <img src="/homework4/HTMLhomework4/home-image-7.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="my-2 text-md-end">
+                                <img src="/homework4/HTMLhomework4/number-04.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                            <div class="my-2">
+                                <h3>Meeting With The Customer</h3>
+                            </div>
+                            <div class="my-2">
+                                <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                    project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-wrap-reverse align-items-center">
+                <div class="col-12 col-md-3 meeting">
+                    <div class="my-3 text-md-end">
+                        <img src="/homework4/HTMLhomework4/home-image-8.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-12 col-md-3">
+                            <div class="my-2 text-md-end">
+                                <img src="/homework4/HTMLhomework4/number-05.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-9">
+                            <div class="my-2">
+                                <h3>Meeting With The Customer</h3>
+                            </div>
+                            <div class="my-2">
+                                <p>The first meeting is very import to form contact and discuss the main ideas of the
+                                    project.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-secondary bg-opacity-10">
+        <div class="container-md">
+            <div class="row pt-5">
+                <div class="col-12 col-md-6">
+                    <div class="mb-5">
+                        <h3 class="fs-1">Our team's work with Projects</h3>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 mb-5 text-md-end">
+                    <a class="text-decoration-none text-uppercase btn btn-success fw-bolder" href="#">All projects</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="card text-white mb-3">
+                        <div class="">
+                            <img src="/homework4/HTMLhomework4/project-1.jpg" class="card-img" alt="...">
+                        </div>
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-evenly bg-success bg-opacity-75 ">
+                            <h4 class="card-title fs-1 fw-bolder">Minimal Creative "Impuls"</h4>
+                            <a class="text-decoration-none text-uppercase text-white fw-bolder" href="#">View site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card text-white mb-3">
+                        <img src="/homework4/HTMLhomework4/project-2.jpg" class="card-img" alt="...">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-evenly bg-success bg-opacity-75 ">
+                            <h4 class="card-title fs-1 fw-bolder">Travel Company "Tour Up"</h4>
+                            <a class="text-decoration-none text-uppercase text-white fw-bolder" href="#">View site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card text-white mb-3">
+                        <img src="/homework4/HTMLhomework4/project-3.jpg" class="card-img" alt="...">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-evenly bg-success bg-opacity-75 ">
+                            <h4 class="card-title fs-1 fw-bolder">Restaurant Pizza "Little Italy"</h4>
+                            <a class="text-decoration-none text-uppercase text-white fw-bolder" href="#">View site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-md">
+            <div class="row py-5">
+                <div class="col-12 col-md-6">
+                    <div>
+                        <img src="/homework4/HTMLhomework4/home-image-9.svg" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+                    <div class="card p-5">
+                        <h3 class="pb-4 fs-1">Sign up for our consultation</h3>
+                        <input type="text" placeholder="Name" class="mb-3 p-2">
+                        <input type="email" placeholder="Email" class="mb-3 p-2">
+                        <textarea placeholder="Message" id="" cols="30" rows="6" class="mb-3 p-2"></textarea>
+                        <input type="submit" value="Send" class="w-25 btn btn-success text-uppercase fw-bold">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div>
+        <div class="container-md d-flex justify-content-center py-3">
+            <div class="row py-2">
+                <div class="col-12">
+                    <p class="text-center fs-1">Subscribe to our news and learn more</p>
+                    <div class="input-group">
+                        <input type="text" class="form-control p-2" placeholder="Your email"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text btn btn-success text-uppercase fw-bold"
+                            id="basic-addon2">subscribe</span>
+                    </div </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <address class="container-md">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3 my-3">
+                    <div class="item">
+                        <img src="/homework4/HTMLhomework4/logo.webp" alt="">
+                        <div class="item-content pt-5">
+                            <a href="tel:0800-000-000" class="text-decoration-none">
+                                <p class="text-success">Phone:<span class="text-black-50">+1(045)-224-12-67</span></p>
+                            </a>
+                            <a href="mailto:info@demolink.org" class="text-decoration-none">
+                                <p class="text-success">Mail:<span class="text-black-50">info@demolink.org</span></p>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 my-3">
+                    <div class="item">
+                        <p class="fs-3">Services</p>
+                        <div class="d-flex flex-column py-1">
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Web design & brending</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Web development</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Full Optimization</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Research & Strategy</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Management & Marketing</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Free support</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 my-3">
+                    <div class="item">
+                        <p class="fs-3">About Company</p>
+                        <div class="d-flex flex-column py-1">
+                            <a href="#" class="text-decoration-none text-black-50 my-2">About us</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Team</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Case studio</a>
+                            <a href="#" class="text-decoration-none text-black-50 my-2">Contacts</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 my-3">
+                    <div class="d-flex flex-column">
+                        <p class="fs-3">Our Social Networks</p>
+                        <p class="text-black-50 py-2">Join us in the social networks and keep up on the latest news.</p>
+                        <ul class="d-flex p-0">
+                            <li>
+                                <a class="icon me-2" href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon me-2" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon me-2" href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="icon" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </address>
+        <div class="container-md">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p class="text-black-50">Copyright © 2018 Wordpress Maikon. All Rights Reserved. | Theme design by<a
+                            href="#" class="text-decoration-none text-success">Zemez</a></p>
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                    <a href="#" class="text-decoration-none text-black-50 pe-5">Privacy & Policy</a>
+                    <a href="#" class="text-decoration-none text-black-50">FAQ</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
