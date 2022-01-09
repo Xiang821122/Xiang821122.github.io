@@ -1,0 +1,2749 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/resect.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        header {
+            background-color: #ee4d2d;
+            font-size: 12px;
+            z-index: 6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header a {
+            color: #fff;
+        }
+
+        .shopee-navbar {
+            max-width: 1200px;
+        }
+
+        .followUs::before {
+            content: '';
+            border-left: 1px solid #fff;
+            padding-right: 10px;
+        }
+
+        .followUs::after {
+            content: '';
+            border-right: 1px solid #fff;
+            padding-left: 10px;
+        }
+
+        .login:before {
+            content: '';
+            border-left: 1px solid #fff;
+            padding-right: 10px;
+        }
+
+        .logo-pic {
+            width: 162px;
+        }
+
+        .shopee-main {
+            margin-top: 140px;
+            width: 1200px;
+        }
+
+        .lottery {
+            position: fixed;
+            right: 40px;
+            bottom: 90px;
+            z-index: 3;
+        }
+
+        .slideshow {
+            width: 797px;
+        }
+
+        .slideshow-add {
+            height: 115px;
+        }
+
+        .card {
+            font-size: 6px;
+            width: 100px;
+        }
+
+        .card-img-top {
+            width: 45px;
+        }
+
+        .cart-iocn {
+            width: 34px;
+        }
+
+        .popular {
+            width: 100px;
+        }
+
+        .popular-icon {
+            width: 45px;
+        }
+
+        .popular-info {
+            font-size: 9px;
+            color: #000;
+        }
+
+        .featured {
+            background-color: #cf021b;
+        }
+
+        .featured a {
+            color: #fff;
+        }
+
+        .bargain-pic img {
+            width: 162px;
+        }
+
+        .sale {
+            position: absolute;
+            width: 50px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #fa0;
+            color: red;
+            top: 0px;
+            right: 0px;
+        }
+
+        .sale::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 25px solid #fa0;
+            border-right: 25px solid #fa0;
+            border-bottom: 5px solid transparent;
+            left: 0;
+            top: 100%;
+        }
+
+        .classification-pic {
+            width: 83px;
+        }
+
+        .time-limit-txt {
+            color: #f25220;
+        }
+
+        .time-limit-num {
+            font-size: 9px;
+        }
+
+        .time-limit-pic img {
+            width: 173px;
+        }
+
+        .time-limit-price {
+            font-size: 9px;
+            padding-right: 2px;
+        }
+
+        .sold {
+            width: 156px;
+            font-size: 9px;
+            margin-top: -14px;
+            background-color: #f25220;
+            color: #fff;
+            border-radius: 100px;
+        }
+
+        .ensure-pic {
+            width: 17px;
+        }
+
+        .give-back-pic {
+            width: 180px;
+        }
+
+        .give-back-txt {
+            bottom: 0;
+            left: 42px;
+        }
+
+        .keywords-txt {
+            padding: 20px 10px 20px 20px;
+            font-size: 13px;
+        }
+
+        .keywords-pic {
+            width: 100px;
+        }
+
+        .hot {
+            position: absolute;
+            font-size: 9px;
+            width: 30px;
+            text-align: center;
+            padding-top: 10px;
+            background-color: #fa0;
+            color: red;
+            top: 0;
+            left: 0;
+        }
+
+        .hot::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 10px solid #fa0;
+            ;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+
+            left: 0;
+            top: 100%;
+        }
+
+        .hot-pic img {
+            width: 180px;
+        }
+
+        .find-new {
+            width: 172px;
+            height: 60px;
+        }
+
+        .new-year {
+            width: 252px;
+            height: 60px;
+        }
+
+        .new-year img {
+            width: 160px;
+        }
+
+        .new-find-year {
+            z-index: 3;
+            top: 104px;
+            background-color: #fff;
+        }
+
+        .new-find-year-info {
+            margin-top: -12px;
+        }
+
+        .new-find-year-pic img {
+            width: 188px;
+        }
+
+        .new-find-year-sale {
+            font-size: 6px;
+            position: absolute;
+            width: 40px;
+            text-align: center;
+            padding: 10px 0;
+            background-color: rgb(255, 170, 0, .9);
+            color: red;
+            top: 0px;
+            right: 0px;
+        }
+
+        .new-find-year-sale::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 20px solid rgb(255, 170, 0, .9);
+            border-right: 20px solid rgb(255, 170, 0, .9);
+            border-bottom: 5px solid transparent;
+            left: 0;
+            top: 100%;
+        }
+
+        .good {
+            position: absolute;
+            font-size: 9px;
+            padding: 1px 3px;
+            background-color: #fa0;
+            color: red;
+            top: 10px;
+            left: 0px;
+        }
+
+        .good::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 3px solid #000;
+            border-left: 5px solid transparent;
+            left: 0;
+            top: 100%;
+        }
+
+        .new-find-year-commodity {
+            margin-bottom: 8px;
+        }
+
+        .new-find-year-price {
+            font-size: 9px;
+        }
+
+        .new-find-year-txt {
+            font-size: 9px;
+        }
+
+        .new-find-year-content {
+            width: 168px;
+        }
+
+        .new-find-year-sold {
+            font-size: 9px;
+            color: rgb(161, 161, 161);
+        }
+
+        .new-find-year-more {
+            width: 390px;
+            font-size: 14px;
+        }
+
+        footer {
+            min-width: 1200px;
+        }
+
+        .footer-section {
+            max-width: 1200px;
+            letter-spacing: 2px;
+        }
+
+        .footer-section h2 {
+            font-size: 14px;
+        }
+
+        .footer-section p {
+            font-size: 9px;
+            color: rgb(179, 179, 179);
+        }
+
+        .footer-Classification {
+            max-width: 1200px;
+        }
+
+        .footer-Classification-title {
+            font-size: 14px;
+        }
+
+        .footer-Classification-info {
+            max-width: 1200px;
+        }
+
+        .footer-Classification-info a {
+            font-size: 9px;
+            color: rgb(49, 49, 49);
+        }
+
+        .footer-Classification-content {
+            width: 240px;
+            padding-right: 4px;
+            box-sizing: border-box;
+        }
+
+        .footer-information {
+            max-width: 1200px;
+        }
+
+        .footer-information-main {
+            font-size: 9px;
+            width: 240px;
+        }
+
+        .footer-information-main li {
+            margin-bottom: 6px;
+        }
+
+        .footer-information-main li a {
+            color: rgb(121, 121, 121);
+        }
+
+        .pay {
+            width: 130px;
+        }
+
+        .pay-pic {
+            width: 55px;
+        }
+
+        .pay img {
+            width: 55px;
+        }
+
+        .logistics {
+            width: 190px;
+        }
+
+        .logistics-pic {
+            width: 55px;
+            height: 29px;
+        }
+
+        .logistics-pic img {
+            width: 100%;
+        }
+        .download-pic img{
+            width: 86px;
+        }
+        .download-app img{
+            width: 80px;
+        }
+        .footer-area{
+            font-size: 13px;
+            color: rgb(134, 134, 134);
+        }
+        .footer-area a{
+            color: rgb(134, 134, 134);
+        }
+        .footer-area-line::before{
+            content: '';
+            padding-right: 3px;
+            border-left: 1px solid rgb(134, 134, 134);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="position-fixed top-0 start-0 end-0">
+        <div class="text-white shopee-navbar m-auto">
+            <div class="d-flex justify-content-between">
+                <div class="d-flex align-items-center">
+                    <a href="#" class="m-1">賣家中心</a>
+                    <div class="m-1">
+                        <a href="#">下載</a>
+                    </div>
+                    <div class="m-1">
+                        <span class="followUs">追蹤我們</span>
+                    </div>
+                    <div class="m-1 iconLine fs-6">
+                        <a href="#" class="mx-1"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-1"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="m-1 pe-1"><i class="far fa-bell pe-1"></i>通知總覽</div>
+                    <a href="#" class="m-1 pe-1"><i class="fas fa-question pe-1"></i>幫助中心</a>
+                    <div class="m-1"><i class="fas fa-globe pe-1"></i><span class="pe-1">繁體中文</span><i
+                            class="fas fa-chevron-down pe-1"></i></div>
+                    <a href="#" class="m-1 ps-2">註冊</a>
+                    <a href="#" class="login m-1">登入</a>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="flex-shrink-0 me-5">
+                    <a href="#">
+                        <div class="logo-pic my-2">
+                            <img src="/蝦皮/images/logo.svg" alt="" class="img-fluid">
+                        </div>
+                    </a>
+                </div>
+                <div class="w-100">
+                    <div class="input-group mt-2 mb-1">
+                        <input type="text" class="form-control" placeholder="日本味王27折up，免運搶85折券"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-light" type="button" id="button-addon2">
+                            <i class="fas fa-search text-light"></i>
+                        </button>
+                    </div>
+                    <div class="mb-1">
+                        <a href="#" class="me-2">Nike</a>
+                        <a href="#" class="me-2">年菜</a>
+                        <a href="#" class="me-2">衣服</a>
+                        <a href="#" class="me-2">衣櫃</a>
+                        <a href="#" class="me-2">短靴</a>
+                        <a href="#" class="me-2">針織外套</a>
+                        <a href="#" class="me-2">樂高</a>
+                        <a href="#">烏魚子</a>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 m-3">
+                    <a href="#">
+                        <img src="/蝦皮/images/header-cart.svg" alt="" class="cart-iocn">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="shopee-main mx-auto">
+        <div class="lottery">
+            <a href="#">
+                <img src="/蝦皮/images/蝦幣100.png" alt="">
+            </a>
+        </div>
+        <div>
+            <div class="d-flex justify-content-between">
+
+                <div id="carouselExampleCaptions" class="carousel slidez" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="#">
+                                <img src="https://cf.shopee.tw/file/69a1ccadcd1ce8da575fe655107a4797_xxhdpi"
+                                    class="d-block slideshow" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="https://cf.shopee.tw/file/7abe43302992a67adb54e0055924b919_xxhdpi"
+                                    class="d-block slideshow" alt="...">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="https://cf.shopee.tw/file/381d8b69af7d716fdcbc7ed4f084e1dc_xxhdpi"
+                                    class="d-block slideshow" alt="...">
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+                <div>
+                    <div>
+                        <a href="#">
+                            <img class="slideshow-add"
+                                src="https://cf.shopee.tw/file/af07615ce0b6849fbe77066ea5d28455_xhdpi" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <img class="slideshow-add mt-2"
+                                src="https://cf.shopee.tw/file/725ba1ae042ad4ad110772776578032b_xhdpi" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex text-center justify-content-evenly">
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav01.png" alt="">
+                        <p class="popular-info mt-1">免運 ! 蝦皮直送</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav02.png" alt="">
+                        <p class="popular-info mt-1">蝦皮超市</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav03.png" alt="">
+                        <p class="popular-info mt-1">現領購物金</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav04.png" alt="">
+                        <p class="popular-info mt-1">蝦皮3C家電</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav05.png" alt="">
+                        <p class="popular-info mt-1">超級讚購物</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav06.png" alt="">
+                        <p class="popular-info mt-1">免運搶88折券</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav07.png" alt="">
+                        <p class="popular-info mt-1">男人館</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav08.png" alt="">
+                        <p class="popular-info mt-1">蝦皮團購</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav09.png" alt="">
+                        <p class="popular-info mt-1">蝦皮海外直送</p>
+                    </div>
+                </a>
+                <a href="#" class="pt-3">
+                    <div class="popular">
+                        <img class="popular-icon" src="/蝦皮/images/nav10.png" alt="">
+                        <p class="popular-info mt-1">蝦皮超便宜</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div><img src="/蝦皮/images/recent-event.jpeg" alt=""></div>
+        <div>
+            <div>
+                <img src="/蝦皮/images/dyson-banner.jpeg" alt="">
+            </div>
+            <div class="d-flex justify-content-between align-items-center text-light featured p-3">
+                <p class="mt-3">正貨保證 天天最低價 再搶 9 折券</p>
+                <a href="#">查看更多<i class="fas fa-angle-right ms-2"></i></a>
+            </div>
+            <div class="d-flex featured justify-content-evenly">
+                <a href="#">
+                    <div class="bargain position-relative p-3 bg-white">
+                        <div class="bargain-pic">
+                            <img src="https://cf.shopee.tw/file/17ff4165ca926908ea2a28dda9aefe36_tn" alt="">
+                        </div>
+                        <div class="bargain-txt text-center text-danger mt-3">
+                            <p>$16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="bargain position-relative p-3 bg-white">
+                        <div class="bargain-pic">
+                            <img src="https://cf.shopee.tw/file/b42342f0a6839c9a6e753cfc39a72ff1_tn" alt="">
+                        </div>
+                        <div class="bargain-txt text-center text-danger mt-3">
+                            <p>$8,890</p>
+                        </div>
+                        <div class="sale">
+                            3.4折
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="bargain position-relative p-3 bg-white">
+                        <div class="bargain-pic">
+                            <img src="https://cf.shopee.tw/file/6ac03f7f2fd1e738e13663b022cd2b47_tn" alt="">
+                        </div>
+                        <div class="bargain-txt text-center text-danger mt-3">
+                            <p>$19,888</p>
+                        </div>
+                        <div class="sale">
+                            6折
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="bargain position-relative p-3 bg-white">
+                        <div class="bargain-pic">
+                            <img src="https://cf.shopee.tw/file/17ff4165ca926908ea2a28dda9aefe36_tn" alt="">
+                        </div>
+                        <div class="bargain-txt text-center text-danger mt-3">
+                            <p>$19,888</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="bargain position-relative p-3 bg-white">
+                        <div class="bargain-pic">
+                            <img src="https://cf.shopee.tw/file/17ff4165ca926908ea2a28dda9aefe36_tn" alt="">
+                        </div>
+                        <div class="bargain-txt text-center text-danger mt-3">
+                            <p>$16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="bargain position-relative p-3 bg-white">
+                        <div class="bargain-pic">
+                            <img src="https://cf.shopee.tw/file/17ff4165ca926908ea2a28dda9aefe36_tn" alt="">
+                        </div>
+                        <div class="bargain-txt text-center text-danger mt-3">
+                            <p>$16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <img src="/蝦皮/images/dyson-footer.png" alt="">
+            </div>
+        </div>
+        <div class="classification bg-white mt-3">
+            <div class="pt-3 ms-3">
+                <p>分類</p>
+            </div>
+            <div class="d-flex justify-content-evenly">
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="flex-column">
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="text-center p-3 border">
+                            <img class="classification-pic pb-2"
+                                src="https://cf.shopee.tw/file/17f3879a1872099681d7b85101e187db_tn" alt="">
+                            <p class="text-dark text-decoration-none">女生衣著</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="time-limit bg-white mt-3">
+            <div class="time-limit-title d-flex align-items-center justify-content-between">
+                <div class="pt-3 ms-3 d-flex align-items-center">
+                    <p class="fs-5 time-limit-txt me-4">限時<i class="fas fa-bolt"></i>特價</p>
+                    <div class="time-limit-num me-2">
+                        <p class="bg-dark rounded text-light p-1">00</p>
+                    </div>
+                    <div class="time-limit-num me-2">
+                        <p class="bg-dark rounded text-light p-1">00</p>
+                    </div>
+                    <div class="time-limit-num">
+                        <p class="bg-dark rounded text-light p-1">00</p>
+                    </div>
+                </div>
+                <div class="me-3">
+                    <a href="#" class="text-danger">查看全部<i class="fas fa-angle-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="time-limit-info d-flex justify-content-evenly">
+                <a href="#">
+                    <div class="position-relative p-2 bg-white">
+                        <div class="time-limit-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/aa9318bb796f63d2ee269a9e279fded8_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/38d32219578c2ee07c45c17631784768_tn" alt="">
+                        </div>
+                        <div class="text-center text-danger">
+                            <p><span class="time-limit-price">$</span>16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                        <div class="text-center sold">
+                            <p>已售出</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="position-relative p-2 bg-white">
+                        <div class="time-limit-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/aa9318bb796f63d2ee269a9e279fded8_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/38d32219578c2ee07c45c17631784768_tn" alt="">
+                        </div>
+                        <div class="text-center text-danger">
+                            <p><span class="time-limit-price">$</span>16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                        <div class="text-center sold">
+                            <p>已售出</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="position-relative p-2 bg-white">
+                        <div class="time-limit-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/aa9318bb796f63d2ee269a9e279fded8_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/38d32219578c2ee07c45c17631784768_tn" alt="">
+                        </div>
+                        <div class="text-center text-danger">
+                            <p><span class="time-limit-price">$</span>16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                        <div class="text-center sold">
+                            <p>已售出</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="position-relative p-2 bg-white">
+                        <div class="time-limit-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/aa9318bb796f63d2ee269a9e279fded8_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/38d32219578c2ee07c45c17631784768_tn" alt="">
+                        </div>
+                        <div class="text-center text-danger">
+                            <p><span class="time-limit-price">$</span>16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                        <div class="text-center sold">
+                            <p>已售出</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="position-relative p-2 bg-white">
+                        <div class="time-limit-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/aa9318bb796f63d2ee269a9e279fded8_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/38d32219578c2ee07c45c17631784768_tn" alt="">
+                        </div>
+                        <div class="text-center text-danger">
+                            <p><span class="time-limit-price">$</span>16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                        <div class="text-center sold">
+                            <p>已售出</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="position-relative p-2 bg-white">
+                        <div class="time-limit-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/aa9318bb796f63d2ee269a9e279fded8_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/38d32219578c2ee07c45c17631784768_tn" alt="">
+                        </div>
+                        <div class="text-center text-danger">
+                            <p><span class="time-limit-price">$</span>16,788</p>
+                        </div>
+                        <div class="sale">
+                            8.6折
+                        </div>
+                        <div class="text-center sold">
+                            <p>已售出</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="my-3">
+            <a href="#">
+                <img src="https://cf.shopee.tw/file/1beb7d4f07a7203793e869f433bfb0da" alt="">
+            </a>
+        </div>
+        <div class="bg-white mb-3">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+                <div class="pt-3 ms-3 d-flex align-items-center">
+                    <a href="#">
+                        <p class="fs-5 text-danger me-4">蝦皮商城</p>
+                    </a>
+                    <p class="me-4"><img class="ensure-pic"
+                            src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/6c502a2641457578b0d5f5153b53dd5d.png"
+                            alt="">15天鑑賞期</p>
+                    <p class="me-4"><img class="ensure-pic"
+                            src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/16ead7e0a68c3cff9f32910e4be08122.png"
+                            alt="">蝦皮安心退</p>
+                    <p class="me-4"><img class="ensure-pic"
+                            src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/511aca04cc3ba9234ab0e4fcf20768a2.png"
+                            alt="">假一賠二</p>
+                </div>
+                <div class="me-3">
+                    <a href="#" class="text-danger">查看全部<i class="fas fa-angle-right ms-2"></i></a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="pt-2 ps-2">
+                    <a href="#">
+                        <img src="https://cf.shopee.tw/file/2b49b031d50cd7a7e5f127dbb0aa2d27" alt="">
+                    </a>
+                </div>
+                <div class="flex-colum">
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-colum">
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-colum">
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-colum">
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                    <div class="position-relative p-2">
+                        <a href="#">
+                            <img class="give-back-pic"
+                                src="https://cf.shopee.tw/file/e47dc7f7e4999022b75141cd659381e6_xhdpi" alt="">
+                            <p class="give-back-txt text-danger position-absolute">狂灑百萬折扣碼</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white mb-3">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+                <div class="pt-3 ms-3 d-flex align-items-center">
+                    <p class="fs-6 text-dark me-4">熱門關鍵字</p>
+                </div>
+                <div class="me-3">
+                    <a href="#" class="text-danger"><i class="fas fa-exchange-alt me-2"></i>更改</a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#" class="text-dark pe-2">
+                    <div class="d-flex border">
+                        <div class="keywords-txt">
+                            <div>Nike</div>
+                            <div>80萬+件商品</div>
+                        </div>
+                        <div>
+                            <img class="keywords-pic" src="https://cf.shopee.tw/file/107ecac16d07a73da962c4aeac867cb5"
+                                alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="text-dark pe-2">
+                    <div class="d-flex border">
+                        <div class="keywords-txt">
+                            <div>Nike</div>
+                            <div>80萬+件商品</div>
+                        </div>
+                        <div>
+                            <img class="keywords-pic" src="https://cf.shopee.tw/file/107ecac16d07a73da962c4aeac867cb5"
+                                alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="text-dark pe-2">
+                    <div class="d-flex border">
+                        <div class="keywords-txt">
+                            <div>Nike</div>
+                            <div>80萬+件商品</div>
+                        </div>
+                        <div>
+                            <img class="keywords-pic" src="https://cf.shopee.tw/file/107ecac16d07a73da962c4aeac867cb5"
+                                alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="text-dark pe-2">
+                    <div class="d-flex border">
+                        <div class="keywords-txt">
+                            <div>Nike</div>
+                            <div>80萬+件商品</div>
+                        </div>
+                        <div>
+                            <img class="keywords-pic" src="https://cf.shopee.tw/file/107ecac16d07a73da962c4aeac867cb5"
+                                alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="text-dark pe-2">
+                    <div class="d-flex border">
+                        <div class="keywords-txt">
+                            <div>Nike</div>
+                            <div>80萬+件商品</div>
+                        </div>
+                        <div>
+                            <img class="keywords-pic" src="https://cf.shopee.tw/file/107ecac16d07a73da962c4aeac867cb5"
+                                alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="bg-white mb-3">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+                <div class="pt-3 ms-3 d-flex align-items-center">
+                    <p class="fs-6 text-danger me-4">熱門商品</p>
+                </div>
+                <div class="me-3">
+                    <a href="#" class="text-danger">查看全部<i class="fas fa-angle-right ms-2"></i></a>
+                </div>
+            </div>
+            <div>
+                <div class="d-flex justify-content-between">
+                    <a href="#">
+                        <div class="px-2 py-3 bg-white">
+                            <div class="hot-pic position-relative">
+                                <img src="https://cf.shopee.tw/file/7d857cc78f5712f1b3a2dee8a0b0cc61_tn" alt="">
+                                <div class="hot text-light">
+                                    TOP
+                                </div>
+                            </div>
+                            <div class="text-center text-dark mt-3">
+                                <p>熱門滿額免運專區 🚚</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="px-2 py-3 bg-white">
+                            <div class="hot-pic position-relative">
+                                <img src="https://cf.shopee.tw/file/ebe3a217e9e477ec5899f2991b38cf47_tn" alt="">
+                                <div class="hot text-light">
+                                    TOP
+                                </div>
+                                <div
+                                    class="position-absolute start-0 end-0 bottom-0 bg-dark bg-opacity-25 text-light text-center">
+                                    月銷售 15萬+
+                                </div>
+                            </div>
+                            <div class="text-center text-dark mt-3">
+                                <p>醫療用口罩</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="px-2 py-3 bg-white">
+                            <div class="hot-pic position-relative">
+                                <img src="https://cf.shopee.tw/file/ebe3a217e9e477ec5899f2991b38cf47_tn" alt="">
+                                <div class="hot text-light">
+                                    TOP
+                                </div>
+                                <div
+                                    class="position-absolute start-0 end-0 bottom-0 bg-dark bg-opacity-25 text-light text-center">
+                                    月銷售 15萬+
+                                </div>
+                            </div>
+                            <div class="text-center text-dark mt-3">
+                                <p>醫療用口罩</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="px-2 py-3 bg-white">
+                            <div class="hot-pic position-relative">
+                                <img src="https://cf.shopee.tw/file/ebe3a217e9e477ec5899f2991b38cf47_tn" alt="">
+                                <div class="hot text-light">
+                                    TOP
+                                </div>
+                                <div
+                                    class="position-absolute start-0 end-0 bottom-0 bg-dark bg-opacity-25 text-light text-center">
+                                    月銷售 15萬+
+                                </div>
+                            </div>
+                            <div class="text-center text-dark mt-3">
+                                <p>醫療用口罩</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="px-2 py-3 bg-white">
+                            <div class="hot-pic position-relative">
+                                <img src="https://cf.shopee.tw/file/ebe3a217e9e477ec5899f2991b38cf47_tn" alt="">
+                                <div class="hot text-light">
+                                    TOP
+                                </div>
+                                <div
+                                    class="position-absolute start-0 end-0 bottom-0 bg-dark bg-opacity-25 text-light text-center">
+                                    月銷售 15萬+
+                                </div>
+                            </div>
+                            <div class="text-center text-dark mt-3">
+                                <p>醫療用口罩</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="px-2 py-3 bg-white">
+                            <div class="hot-pic position-relative">
+                                <img src="https://cf.shopee.tw/file/ebe3a217e9e477ec5899f2991b38cf47_tn" alt="">
+                                <div class="hot text-light">
+                                    TOP
+                                </div>
+                                <div
+                                    class="position-absolute start-0 end-0 bottom-0 bg-dark bg-opacity-25 text-light text-center">
+                                    月銷售 15萬+
+                                </div>
+                            </div>
+                            <div class="text-center text-dark mt-3">
+                                <p>醫療用口罩</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="position-sticky new-find-year">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item"><button class="page-link find-new text-danger">每日新發現</button></li>
+                        <li class="page-item"><button class="page-link new-year"><img
+                                    src="https://cf.shopee.tw/file/6ee330869264021d32898b35d15935fa" alt=""></button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="d-flex new-find-year-info flex-wrap justify-content-between mb-3">
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="new-find-year-commodity">
+                    <div class="position-relative p-1 bg-white">
+                        <div class="new-find-year-pic position-relative">
+                            <img src="https://cf.shopee.tw/file/25a51e6ea7e9f3bdd9f9ecb3cc7a7a02_tn" alt="">
+                            <img class="position-absolute start-0"
+                                src="https://cf.shopee.tw/file/1993f6ab641a3d572e8fee0469326382" alt="">
+                        </div>
+                        <div>
+                            <div class="new-find-year-content mx-auto">
+                                <p class="new-find-year-txt text-dark mt-1">美美銀樓 可刷卡分期0利率 9999 (精工廠)金塊 保值商品</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-danger"><span class="new-find-year-price text-danger">$</span>16,788
+                                    </p>
+                                    <p class="new-find-year-sold">已售出 5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-find-year-sale">
+                            8.6折
+                        </div>
+                        <div class="good text-light">
+                            蝦皮精選
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="text-center mb-5">
+                <a href="#" type="button" class="btn btn-light new-find-year-more">查看更多</a>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-white">
+        <div class="footer-section mx-auto pt-5 border-bottom">
+            <h2>蝦皮購物花得更少買得更好，買東西就是如此快速便利！</h2>
+            <p>蝦皮購物是台灣首屈一指的電商平台，在東南亞六國皆有佈局（新加坡、馬來西亞、泰國、印尼、越南、菲律賓），簡易方便的操作介面讓你隨時隨地都能輕鬆購物！蝦皮購物擁有完整的金流、物流服務，提供多種安全可靠的付款方式，包含銀行轉帳、信用卡線上交易、貨到付款、蝦皮錢包，和街口支付等多元行動支付管道，更有蝦皮承諾保障你的交易安全，啟動第三方支付託管交易款項，無須擔心收不到訂購的商品、或是拿不到退還的金額。商品評價和評論透明呈現在你眼前，你可以快速挑選出商品受歡迎、並提供良好服務、得到買家一致推薦的賣家；還能夠透過購買清單中的訂單詳情獲得最即時的貨態追蹤，查詢訂單最新配送進度。現在就來加入蝦皮購物，享受最獨一無二的網路購物體驗！
+            </p>
+            <h2>愛上蝦皮購物，強大的搜尋功幫助你找尋心中好物！</h2>
+            <p>在蝦皮購物，你能夠用最划算的價格買到所有需要、想要的商品，從每日「限時特賣」專區，你可以找到各式好康下殺品；不知道要買什麼？快來「熱門搜尋」一覽時下最夯熱門話題商品，瞧瞧大家都在瘋什麼！「每日新發現」貼心的相關商品推薦為你整理出更多好選擇；「蝦皮團購」更是包辦食衣住行育樂，精選網路購物熱門團購商品讓你輕輕鬆鬆跟上流行腳步，從餐券、住宿券、電影票、遊樂園門票、SPA按摩券，到美食伴手禮、美妝保健用品、居家生活日用耗品、汽機車配件、手機3C用品通通買得到，快速出貨下單免運費，快來揪團享折扣！
+            </p>
+            <p>蝦皮商城網羅國內外各大知名品牌進駐，所有商品均享有100%正品的保證，種類繁多、品牌齊全，包括三星 SAMSUNG、華碩 ASUS、巴黎萊雅 L'OREAL PARIS、微星 msi、innisfree、紐巴倫
+                New Balance、LEVI’S、哈根達斯 Häagen-Dazs、戴森
+                dyson等，月月國際大牌超級品牌日更是讓你買得開心省得更開心，走在時尚最尖端不費力！別忘了還有蝦幣回饋，只要在優選賣家賣場和蝦皮商城消費即可獲得蝦幣累積和進行折抵，買越多賺越多，線上購物從未這麼簡單！
+            </p>
+            <h2>蝦皮購物台灣 11 大購物節，千萬不能錯過！</h2>
+            <p>除了天天都有的購物金與限時特賣，蝦皮還有 11
+                大年度購物節你一定要知道！每年一、二月的農曆新年線上年貨大街年貨節，蝦皮發紅包讓你便宜買年貨，除舊佈新為你添好運；六月618蝦皮年中慶，用最划算折扣購入夏季服飾，換新衣就等這一檔；九月 9.9
+                超級購物節，是全台灣最大的網購盛典，眾多意想不到的優惠好禮全台瘋搶；十月的 10.10品牌加倍慶，不僅商品折扣加倍，更有買貴就退的商城最低價保證；十一月的 11.11
+                購物節，不論你是單身還死會，都該用蝦皮超優惠的折價券，入手高品質的商品犒賞自己；最後， 12.12
+                生日慶，蝦皮揪你一起狂歡慶祝，購入聖誕驚喜與新年好禮，就等這一波。台灣最狂的折扣優惠都在這裡，寵愛自己就從蝦皮購物開始！
+            </p>
+        </div>
+        <div class="footer-Classification mx-auto pt-5">
+            <div class="footer-Classification-title">分類</div>
+        </div>
+        <div class="d-flex footer-Classification-info mx-auto pb-5 border-bottom">
+            <div class="footer-Classification-content pt-2">
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+            </div>
+            <div class="footer-Classification-content pt-2">
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+            </div>
+            <div class="footer-Classification-content pt-2">
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+            </div>
+            <div class="footer-Classification-content pt-2">
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+            </div>
+            <div class="footer-Classification-content pt-2">
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+                <div class="pt-2">
+                    <div><a href="#">女性衣著</a></div>
+                </div>
+                <div class="d-flex flex-wrap">
+                    <div>
+                        <a href="#">T恤</a>
+                    </div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">長褲</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">內睡衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">外套</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">其他</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">針織/毛衣</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">多件式套裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">大尺碼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">小可愛/背心</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">帽T/大學T</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">泳裝/比基尼</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">休閒運動服飾</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">短褲</a></div><span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">洋裝</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">裙子</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">上衣類</a></div>
+                    <span>&nbsp;|&nbsp;</span>
+                    <div><a class="_12uvse" href="#">襯衫</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-information mx-auto pt-5">
+            <div class="d-flex border-bottom">
+                <div class="footer-information-main">
+                    <div>
+                        <p>客服中心</p>
+                    </div>
+                    <ul class="list-group">
+                        <li>
+                            <a href="#">幫助中心</a>
+                        </li>
+                        <li>
+                            <a href="#">蝦皮商城</a>
+                        </li>
+                        <li>
+                            <a href="#">付款方式</a>
+                        </li>
+                        <li>
+                            <a href="#">蝦皮錢包</a>
+                        </li>
+                        <li>
+                            <a href="#">蝦幣</a>
+                        </li>
+                        <li>
+                            <a href="#">運費補助</a>
+                        </li>
+                        <li>
+                            <a href="#">退貨退款</a>
+                        </li>
+                        <li>
+                            <a href="#">延長訂單撥款</a>
+                        </li>
+                        <li>
+                            <a href="#">聯絡客服</a>
+                        </li>
+                        <li>
+                            <a href="#">防詐騙宣導</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-information-main">
+                    <div>
+                        <p>關於蝦皮</p>
+                    </div>
+                    <ul class="list-group">
+                        <li>
+                            <a href="#">幫助中心</a>
+                        </li>
+                        <li>
+                            <a href="#">蝦皮商城</a>
+                        </li>
+                        <li>
+                            <a href="#">付款方式</a>
+                        </li>
+                        <li>
+                            <a href="#">蝦皮錢包</a>
+                        </li>
+                        <li>
+                            <a href="#">蝦幣</a>
+                        </li>
+                        <li>
+                            <a href="#">運費補助</a>
+                        </li>
+                        <li>
+                            <a href="#">退貨退款</a>
+                        </li>
+                        <li>
+                            <a href="#">延長訂單撥款</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-information-main">
+                    <div>
+                        <p>付款</p>
+                    </div>
+                    <div class="pay d-flex flex-wrap">
+                        <div class="pay-pic">
+                            <img src="/蝦皮/images/mastercard.png" alt="">
+                        </div>
+                        <div class="pay-pic">
+                            <img src="/蝦皮/images/jcb.jpg" alt="">
+                        </div>
+                        <div class="pay-pic">
+                            <img src="/蝦皮/images/visa.png" alt="">
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p>物流合作</p>
+                    </div>
+                    <div class="logistics d-flex flex-wrap">
+                        <div class="logistics-pic">
+                            <img src="/蝦皮/images/7-eleven-logo.png" alt="">
+                        </div>
+                        <div class="logistics-pic">
+                            <img src="/蝦皮/images/f.png" alt="">
+                        </div>
+                        <div class="logistics-pic">
+                            <img src="/蝦皮/images/萊爾富.png" alt="">
+                        </div>
+                        <div class="logistics-pic">
+                            <img src="/蝦皮/images/黑貓.jpg" alt="">
+                        </div>
+                        <div class="logistics-pic">
+                            <img src="/蝦皮/images/ok.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-information-main">
+                    <div>
+                        <p>關注我們</p>
+                    </div>
+                    <div>
+                        <a href="#" class="d-flex align-items-center text-dark mb-2">
+                            <i class="fab fa-facebook me-2"></i>
+                            <div>Facebook</div>
+                        </a>
+                        <a href="#" class="d-flex align-items-center text-dark mb-2">
+                            <i class="fab fa-instagram-square me-2"></i>
+                            <div>Instagram</div>
+                        </a>
+                        <a href="#" class="d-flex align-items-center text-dark mb-2">
+                            <i class="fab fa-line me-2"></i>
+                            <div>Line</div>
+                        </a>
+                        <a href="#" class="d-flex align-items-center text-dark mb-2">
+                            <i class="fab fa-linkedin me-2"></i>
+                            <div>LinkedIn</div>
+                        </a>
+                        <a href="#" class="d-flex align-items-center text-dark mb-2">
+                            <i class="fas fa-lightbulb me-2"></i>
+                            <div>蝦品輯部落格</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-information-main">
+                    <div>
+                        <p>下載蝦皮</p>
+                    </div>
+                    <a href="#" class="d-flex">
+                        <div class="download-pic">
+                            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/5bc2dcfe400e86d96951e55333a55861.png" alt="">
+                        </div>
+                        <div class="download-app d-flex flex-column justify-content-around ms-2">
+                            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/39f189e19764dab688d3850742f13718.png" alt="">
+                            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/f4f5426ce757aea491dce94201560583.png" alt="">
+                            <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg//assets/1ae215920a31f2fc75b00d4ee9ae8551.png" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex py-4 footer-area justify-content-between">
+                <div>
+                    © 2022 Shopee. 版權所有。
+                </div>
+                <div class="d-flex">
+                    <p>國家和地區 :</p>
+                    <a href="#" class="px-1">新加坡</a>
+                    <a href="#" class="footer-area-line pe-1">印尼</a>
+                    <a href="#" class="footer-area-line pe-1">台灣</a>
+                    <a href="#" class="footer-area-line pe-1">泰國</a>
+                    <a href="#" class="footer-area-line pe-1">馬來西亞</a>
+                    <a href="#" class="footer-area-line pe-1">越南</a>
+                    <a href="#" class="footer-area-line pe-1">菲律賓</a>
+                    <a href="#" class="footer-area-line pe-1">巴西</a>
+                    <a href="#" class="footer-area-line pe-1">墨西哥</a>
+                    <a href="#" class="footer-area-line pe-1">哥倫比亞</a>
+                    <a href="#" class="footer-area-line pe-1">智利</a>
+                    <a href="#" class="footer-area-line pe-1">波蘭</a>
+                    <a href="#" class="footer-area-line pe-1">西班牙</a>
+                    <a href="#" class="footer-area-line pe-1">法國</a>
+                    <a href="#" class="footer-area-line pe-1">印度</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fcce0bf7de.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
