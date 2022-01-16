@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "title": "iPadAir",
+        "productImg": "/apple/pic/ipad-air-firstpic.jfif" ,
+        "exterior": {
+            "greySpace": ["太空灰色","#B2B5B7","/apple/pic/MicrosoftTeams-image4.png"],
+            "silver": ["銀色","#DEE0DF","/apple/pic/MicrosoftTeams-image5.png"],
+            "green": ["綠色","#CDDECA","/apple/pic/MicrosoftTeams-image3.png"],
+            "roseGold": ["玫瑰金色","#EBCAC3","/apple/pic/MicrosoftTeams-image2.png"],
+            "skyBlue": ["天藍色","#C9D8E5","/apple/pic/MicrosoftTeams-image.png"]
+        },
+        "ram": {
+            "64":"18900",
+            "256":"23900"
+        }
+    }
+]

@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/resect.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        .btn {
+            width: 30%;
+            box-sizing: border-box;
+            margin: 10px;
+            font-size: 9px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .color span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .product-txt {
+            width: 100%;
+            padding: 0 6px;
+        }
+
+        .accordion-button {
+            display: block;
+        }
+
+        .accordion-button[aria-expanded='true'] {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex justify-content-center align-items-center">
+        <a href="#" id="logo"><i class="fab fa-apple fs-1 text-dark me-5"></i></a>
+        <button id="iPadAir">iPadAir</button>
+        <button id="iPhone">iPhone</button>
+        <button id="MacPro">MacPro</button>
+    </header>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 col-md-6 product-pic"></div>
+            <div class="col-12 col-md-6 product-info">
+                <p class="product-title fs-1">購買 iPad Air</p>
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <button class="accordion-button showColor" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                        </button>
+
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap product-color">
+                                    <div class="product-txt">外觀</div>
+                                    <!-- <button class="spaceGray btn btn-outline-secondary color" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseOne"><span></span>
+                                        <p></p>
+                                    </button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item productMemory">
+                        <button class="accordion-button collapsed showRam" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            儲存裝置
+                        </button>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap product-ram">
+                                    <div class="product-txt">儲存裝置</div>
+                                    <!-- <button class="btn btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo" </button>
+                                    <button class="btn btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseTwo"></button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item productNet">
+                        <button class="accordion-button collapsed showWifi" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            連線能力
+                        </button>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-wrap product-wifi">
+                                    <div class="product-txt">連線能力</div>
+                                    <!-- <button class="btn btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree"></button>
+                                    <button class="btn btn-outline-secondary" data-bs-toggle="collapse"
+                                        data-bs-target="#panelsStayOpen-collapseThree"></button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="product-price"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+        <script>
+            const appleData = [
+                {
+                    id: 1,
+                    title: "iPadAir",
+                    productImg: "/apple/pic/ipad-air-firstpic.jfif",
+                    price: 18900,
+                    exterior: [
+                        {
+                            color: 'graySpace',
+                            name: '太空灰',
+                            hex: '#B2B5B7',
+                            img: '/apple/pic/MicrosoftTeams-image4.png'
+                        },
+                        {
+                            color: 'silver',
+                            name: '銀色',
+                            hex: '#DEE0DF',
+                            img: '/apple/pic/MicrosoftTeams-image5.png'
+                        },
+                        {
+                            color: 'green',
+                            name: '綠色',
+                            hex: '#CDDECA',
+                            img: '/apple/pic/MicrosoftTeams-image3.png'
+                        },
+                        {
+                            color: 'roseGold',
+                            name: '玫瑰金色',
+                            hex: '#EBCAC3',
+                            img: '/apple/pic/MicrosoftTeams-image2.png'
+                        },
+                        {
+                            color: 'skyBlue',
+                            name: '天藍色',
+                            hex: '#C9D8E5',
+                            img: '/apple/pic/MicrosoftTeams-image.png'
+                        }
+                    ],
+                    spec: [
+                        {
+                            name: '儲存裝置',
+                            detail: [
+                                {
+                                    name: '64GB',
+                                    fit: 0
+                                },
+                                {
+                                    name: '256GB',
+                                    fit: 5000
+                                }
+                            ]
+                        },
+                        {
+                            name: '連線能力',
+                            detail: [
+                                {
+                                    name: 'Wi-Fi',
+                                    fit: 0
+                                },
+                                {
+                                    name: 'Wi-Fi + 行動網路',
+                                    fit: 4300
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+
+            window.onload = function () {
+                startPage()
+                buttonColor()
+                specRam()
+                specWifi()
+                picChange()
+                ramChange()
+                wifiChange()
+                changePriceOnbtn()
+            }
+            const product_pic = document.querySelector('.product-pic')
+            const showPrice = document.querySelector('.product-price')
+            showPrice.classList.add('fs-2','text-end','mt-4')
+            function startPage() {
+
+                const img = document.createElement('img')
+
+                const startProductImg = appleData[0].productImg
+                img.setAttribute('src', startProductImg)
+                product_pic.appendChild(img)
+            }
+            function buttonColor() {
+                const exteriorArry = appleData[0].exterior
+                const productColor = document.querySelector('.product-color')
+                exteriorArry.forEach(item => {
+                    const btn = document.createElement('button')
+                    const btnSpan = document.createElement('span')
+                    const btnP = document.createElement('p')
+
+                    const colorName = item.name
+                    const colorhex = item.hex
+
+                    btnSpan.setAttribute('style', `background-color:${colorhex}`)
+                    btnP.innerText = colorName
+                    btn.classList.add('btn', 'btn-outline-secondary', 'color')
+                    btn.setAttribute('data-bs-toggle', 'collapse')
+                    btn.setAttribute('id', `${item.color}`)
+                    btn.setAttribute('data-bs-target', '#panelsStayOpen-collapseOne')
+                    btn.append(btnSpan, btnP)
+                    productColor.append(btn)
+                })
+            }
+            function specRam() {
+                const ramObj = appleData[0].spec[0]
+
+                const ramDiv = document.querySelector('.product-ram')
+                ramObj.detail.forEach(item => {
+                    const price = appleData[0].price + item.fit
+                    // console.log(item)
+                    const ramButton = document.createElement('button')
+                    const txtSpan = document.createElement('span')
+                    const priceSpan = document.createElement('span')
+
+                    txtSpan.innerText = item.name
+                    priceSpan.innerText = `NT$ ${price} `
+
+                    ramButton.classList.add('btn', 'btn-outline-secondary')
+                    txtSpan.classList.add('fs-3')
+
+                    ramButton.setAttribute('data-bs-toggle', 'collapse')
+                    ramButton.setAttribute('data-bs-target', '#panelsStayOpen-collapseTwo')
+
+                    ramButton.setAttribute('id', `${item.name}`)
+
+                    ramButton.append(txtSpan, priceSpan)
+                    ramDiv.append(ramButton)
+                })
+            }
+            function specWifi() {
+                const wifiObj = appleData[0].spec[1]
+
+                const wifiDiv = document.querySelector('.product-wifi')
+                wifiObj.detail.forEach(item => {
+                    let price = appleData[0].price + item.fit
+                    // console.log(item)
+                    const wifiButton = document.createElement('button')
+                    const txtSpan = document.createElement('span')
+                    const priceSpan = document.createElement('span')
+
+                    txtSpan.innerText = item.name
+                    priceSpan.innerText = `NT$ ${price} `
+
+                    wifiButton.classList.add('btn', 'btn-outline-secondary')
+                    txtSpan.classList.add('fs-6')
+                    priceSpan.classList.add('price-show')
+
+                    wifiButton.setAttribute('data-bs-toggle', 'collapse')
+                    wifiButton.setAttribute('data-bs-target', '#panelsStayOpen-collapseThree')
+                    wifiButton.setAttribute('id', `${item.name}`)
+
+                    wifiButton.append(txtSpan, priceSpan)
+                    wifiDiv.append(wifiButton)
+                })
+            }
+            function picChange() {
+                const exteriorArry = appleData[0].exterior
+
+                const showColorNameDiv = document.querySelector('.showColor')
+                exteriorArry.forEach(item => {
+                    const img = document.createElement('img')
+                    const btn = document.getElementById(item.color)
+                    btn.addEventListener('click', function () {
+                        product_pic.innerHTML = ''
+                        showColorNameDiv.innerText = item.name
+                        showColorNameDiv.classList.add('fw-bold', 'fs-4')
+
+                        img.setAttribute('src', `${item.img}`)
+                        product_pic.append(img)
+                    })
+                })
+            }
+            function ramChange() {
+                const ramObj = appleData[0].spec[0]
+
+                ramObj.detail.forEach(item => {
+                    const btn = document.getElementById(item.name)
+                    btn.addEventListener('click', function () {
+                        showPrice.innerText = ''
+                        const showRamNameDiv = document.querySelector('.showRam')
+
+                        showRamNameDiv.innerText = item.name
+                        showRamNameDiv.classList.add('fw-bold', 'fs-4')
+                    })
+                })
+            }
+            function wifiChange() {
+                const wifiObj = appleData[0].spec[1]
+
+                wifiObj.detail.forEach(item => {
+                    const btn = document.getElementById(item.name)
+                    btn.addEventListener('click', function () {
+                        showPrice.innerText = ''
+                        const wifiBtn = document.getElementById(item.name)
+                        const span = wifiBtn.querySelector('span:nth-child(2)').innerText
+                        showPrice.innerText = span
+
+                        const showWifiNameDiv = document.querySelector('.showWifi')
+
+                        showWifiNameDiv.innerText = item.name
+                        showWifiNameDiv.classList.add('fw-bold', 'fs-4')
+                    })
+                })
+            }
+            function changePriceOnbtn() {
+                const ramObj = appleData[0].spec[0]
+                const productRamDiv = document.querySelector('.product-ram')
+                const wifiObj = appleData[0].spec[1]
+
+                ramObj.detail.forEach(item => {
+                    const btn = document.getElementById(item.name)
+                    
+
+                    btn.addEventListener('click', function () {
+                        let price = item.fit + appleData[0].price
+
+                        wifiObj.detail.forEach(col => {
+                            const wifiBtn = document.getElementById(col.name)
+                            const span = wifiBtn.querySelector('span:nth-child(2)')
+                            // console.log(span)
+                            price += col.fit
+                            // console.log(price)
+                            span.innerText = `NT$ ${price} `
+                        })
+                    })
+                })
+            }
+        </script>
+
+</body>
+
+</html>
