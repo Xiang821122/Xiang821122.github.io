@@ -10,6 +10,9 @@
 
     <title>LOL</title>
     <style>
+        .jumbotron img{
+            width: 30%;
+        }
         .card {
             border: 1px solid black;
             margin-bottom: 30px;
@@ -61,9 +64,9 @@
 
 <body>
     <div class="container-fluid">
-        <div class="jumbotron bg-info text-center">
-            <h1 class="py-3">LOL英雄聯盟圖鑑</h1>
-            <button class="btn btn-outline-secondary text-white mb-2">圖鑑展開</button>
+        <div class="jumbotron bg-dark text-center">
+            <img src="/LOL/pic/Zd3kUpp.png" alt="英雄聯盟">
+            <!-- <button class="btn btn-outline-secondary text-white mb-2">圖鑑展開</button> -->
         </div>
 
         <div class="row">
@@ -81,7 +84,7 @@
                         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#info">
                             詳細資訊
                         </button>
-                        <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#video">
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#video">
                             觀看影片
                         </button>
                     </div>
@@ -133,13 +136,12 @@
         const url = 'https://ddragon.leagueoflegends.com/cdn/10.22.1/data/zh_TW/champion.json'
         let dataArray = []
     </script>
-    <script type="module">
-        import { $gg } from '../modules/helpers.js'
+    <script>
 
-        row = $gg('.row')
+        row = document.querySelector('.row')
         window.onload = function () {
             loadLolData()
-            cardTemplate = $gg('#cardLol')
+            cardTemplate = document.querySelector('#cardLol')
         }
 
         function loadLolData() {
