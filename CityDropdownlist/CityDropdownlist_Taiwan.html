@@ -11,7 +11,7 @@
 <body>
     <h1>Select / options下拉式選單的製作</h1>
     <select name="cities" id="cities"></select>
-    <select name="district" id="district"></select>
+    <select name="district" id="district">https://jingyi1213.github.io/Q3_after.html</select>
     <input type="submit" value="提交資料">
 
     <script>
@@ -30,7 +30,7 @@
             submit.onclick = function(){
                 alert(`提交資料: ${citySelect.value}, ${districtSelect.value}`)
             }
-            checkUI()
+            
             districtSelect.onchange = function () {
                 checkUI()
             }
@@ -40,13 +40,13 @@
             fetch(url)
                 .then(response => response.json())
                 .then(result => {
-
                     cityArray = [{ CityName: '', AreaList: [] }].concat(result)
                     cityArray.forEach(city => {
                         let option = document.createElement('option')
                         option.value = city.CityName
                         option.innerText = city.CityName == '' ? '---請選擇縣市---' : city.CityName
                         citySelect.append(option)
+                        checkUI()
                     })
                 })
         }
