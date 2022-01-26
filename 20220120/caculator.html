@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Caculator</title>
+    <style>
+        .showNum {
+            width: 300px;
+        }
+
+        .box {
+            width: 300px;
+        }
+
+        button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+
+        .zero {
+            width: 130px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="show d-flex flex-column align-items-center">
+        <div class="showNum d-flex flex-row-reverse">
+            <input class="w-100 text-end p-3 fs-1 rounded-3" value="">
+        </div>
+        <div class="d-flex flex-wrap box justify-content-center">
+            <button class="reset bg-secondary bg-opacity-50 text-black">AC</button>
+            <button id="plus-minus" class="bg-secondary bg-opacity-50 text-black fs-5">+/-</button>
+            <button id="percentage" class="bg-secondary bg-opacity-50 text-black fs-5">%</button>
+            <button class="sign bg-warning text-white fs-2">÷</button>
+            <button class="num bg-dark text-white">7</button>
+            <button class="num bg-dark text-white">8</button>
+            <button class="num bg-dark text-white">9</button>
+            <button class="sign bg-warning text-white fs-5">X</button>
+            <button class="num bg-dark text-white">4</button>
+            <button class="num bg-dark text-white">5</button>
+            <button class="num bg-dark text-white">6</button>
+            <button class="sign bg-warning text-white fs-2">-</button>
+            <button class="num bg-dark text-white">3</button>
+            <button class="num bg-dark text-white">2</button>
+            <button class="num bg-dark text-white">1</button>
+            <button class="sign bg-warning text-white fs-2">+</button>
+            <button class="num bg-dark text-white zero rounded-pill">0</button>
+            <button class="num bg-dark text-white fs-5">.</button>
+            <button class="equal bg-warning text-white fs-2">=</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let currentSign = ''
+        let numFirst = 0
+        let numSecond = 0
+
+        const caculateMethods = [
+            { sign: '+', func: (a, b) => a + b },
+            { sign: '-', func: (a, b) => a - b },
+            { sign: 'X', func: (a, b) => a * b },
+            { sign: '÷', func: (a, b) => a / b }
+        ]
+
+        const numberInput = document.querySelector('input')
+        const resetBtn = document.querySelector('.reset')
+        const equalBtn = document.querySelector('.equal')
+
+        const numberBtns = document.querySelectorAll('.num')
+        const singBtns = document.querySelectorAll('.sign')
+
+        const plusMinusBtn = document.querySelector('#plus-minus')
+        const percentage = document.querySelector('#percentage')
+        window.onload = function () {
+            //數字按鈕
+            numberBtns.forEach(btn => {
+                btn.onclick = function () {
+                    // numberInput.value = ''
+                    numberInput.value += btn.innerText
+                }
+            })
+            //清除按鈕
+            resetBtn.onclick = function () {
+                numberInput.value = ''
+            }
+            //符號按鈕
+            singBtns.forEach(btn => {
+                btn.onclick = function () {
+                    currentSign = btn.innerText
+                    numFirst = parseFloat(numberInput.value)
+                    numberInput.value = ''
+                }
+            })
+            //等於按鈕
+            equalBtn.onclick = function () {
+                numSecond = parseFloat(numberInput.value)
+                let caculate = caculateMethods.find(x=>x.sign == currentSign)
+                let answer = caculate.func(numFirst, numSecond)
+
+                numberInput.value = answer
+            }
+            //特殊功能按鈕
+            plusMinusBtn.addEventListener('click', function(){
+                numFirst = numberInput.value * -1
+                numberInput.value = numFirst
+            })
+
+            percentage.addEventListener('click', function(){
+                numFirst = numberInput.value * 0.01
+                numberInput.value = numFirst
+            })
+        }
+    </script>
+
+</body>
+
+</html>
