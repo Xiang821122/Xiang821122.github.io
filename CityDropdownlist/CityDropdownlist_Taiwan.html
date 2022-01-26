@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Select / options下拉式選單的製作</h1>
+    <select name="cities" id="cities"></select>
+    <select name="district" id="district"></select>
+    <input type="submit" value="提交資料">
+
+    <script>
+        const url = 'https://raw.githubusercontent.com/apprunner/FileStorage/master/TaiwanAddress.json'
+
+        const citySelect = document.getElementById('cities')
+        const districtSelect = document.getElementById('district')
+        const submit = document.querySelector("input[type=submit]")
+
+        let cityArray = [], districtArray = []
+
+        window.onload = function () {
+            taiwanJson(url)
+            // citySelectChange()
+            citySelect.onchange = citySelectChange
+            submit.onclick = function(){
+                alert(`提交資料: ${citySelect.value}, ${districtSelect.value}`)
+            }
+            checkUI()
+            districtSelect.onchange = function () {
+                checkUI()
+            }
+        }
+
+        function taiwanJson(url) {
+            fetch(url)
+                .then(response => response.json())
+                .then(result => {
+
+                    cityArray = [{ CityName: '', AreaList: [] }].concat(result)
+                    cityArray.forEach(city => {
+                        let option = document.createElement('option')
+                        option.value = city.CityName
+                        option.innerText = city.CityName == '' ? '---請選擇縣市---' : city.CityName
+                        citySelect.append(option)
+                    })
+                })
+        }
+
+        function citySelectChange() {
+            districtArray = []
+            districtSelect.innerHTML = ''
+            if (citySelect.value == '') {
+                districtArray = ['']
+            }
+            else {
+                //若不為空集合，會先要找到與第一個選單的value並連接
+                //在map選出要的資料放進陣列
+                districtArray = [''].concat(cityArray.find(x => x.CityName == citySelect.value).AreaList.map(x=>`${x.ZipCode}-${x.AreaName}`))
+                // console.log(districtArray)
+            }
+            //迭代每一筆已挑選後的資料distric
+            districtArray.forEach(district => {
+                let option = document.createElement('option')
+                option.innerText = district == '' ? '---請選擇區域---' : district
+                option.value = district
+                districtSelect.append(option)
+            })
+            checkUI()
+        }
+
+        function checkUI(){
+            if(citySelect.value == ''){
+                districtSelect.setAttribute('disabled', 'true')
+                submit.setAttribute('disabled', 'true')
+            }
+            else{
+                districtSelect.removeAttribute('disabled')
+            }
+
+            if(districtSelect.value == ''){
+                submit.setAttribute('disabled', 'true')
+            }
+            else{
+                submit.removeAttribute('disabled')
+            }
+        }
+    </script>
+</body>
+
+</html>
