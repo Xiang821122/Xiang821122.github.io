@@ -25,11 +25,16 @@
             height: 400px;
         }
 
-        .btn:hover {
+        .bg-primary .btn:hover {
             background-color: transparent;
         }
-        li{
+
+        li {
             list-style: decimal;
+        }
+
+        .count i {
+            color: red;
         }
     </style>
 </head>
@@ -68,8 +73,8 @@
                 </tbody>
             </table>
         </div>
-        <div class="row">
-            <div class="col-2 ms-auto count "></div>
+        <div class="row text-end">
+            <div class="col-12 ms-auto count"></div>
         </div>
         <!-- 新增Modal -->
         <div id="add-modal" class="modal fade" tabindex="-1">
@@ -112,6 +117,24 @@
                 </div>
             </div>
         </div>
+
+        <!-- 新增待辦事項Modal -->
+        <div id="todo-modal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">待辦事項</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="todo-modal-text"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
@@ -121,11 +144,11 @@
 
     <script>
         //抓今天日期
-        const tody = new Date()
+        const today = new Date()
 
-        let year = tody.getFullYear()
-        let month = tody.getMonth()
-        let date = tody.getDate()
+        let year = today.getFullYear()
+        let month = today.getMonth()
+        let date = today.getDate()
 
         let currentTodoIndex
 
@@ -138,11 +161,14 @@
 
         const addModal = document.querySelector('#add-modal')
         const editModal = document.querySelector('#edit-modal')
+        const todoModal = document.querySelector('#todo-modal')
 
         const addDateInput = document.querySelector('#add-date')
         const addTitleInput = document.querySelector('#add-title')
         const editDateInput = document.querySelector('#edit-date')
         const editTitleInput = document.querySelector('#edit-title')
+
+        const todoModalText = document.querySelector('.todo-modal-text')
 
         let count = document.querySelector('.count')
 
@@ -168,6 +194,8 @@
             let day = 1
             let rows = Math.ceil((dayOfMonth + firstDay) / 7)
 
+
+
             for (let row = 0; row < rows; row++) {
                 let tr = document.createElement('tr')
                 for (let col = 0; col < 7; col++) {
@@ -182,27 +210,27 @@
                         if (day <= dayOfMonth) {
                             //這個月
                             td.innerText = day
-                            if (day == tody.getDate() && month == tody.getMonth() && year == tody.getFullYear()) {
+                            if (day == today.getDate() && month == today.getMonth() && year == today.getFullYear()) {
                                 td.setAttribute('style', 'border: solid 2px steelblue')
                                 td.setAttribute('style', 'box-shadow: 0 0 8px steelblue;')
                             }
                             td.classList.add('bg-primary', 'bg-opacity-10')
 
-                            if(localStorage.getItem(`${year}-${month+1}-${day}`) != null){
+                            if (localStorage.getItem(`${year}-${month + 1}-${day}`) != null) {
                                 let ul = document.createElement('ul')
                                 ul.classList.add('bg-danger', 'bg-opacity-10')
 
-                                let todoList = JSON.parse(localStorage.getItem(`${year}-${month+1}-${day}`))
+                                let todoList = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${day}`))
                                 todoList.forEach((item, index) => {
                                     let li = document.createElement('li')
                                     li.innerText = item.title
-                                    
+
                                     li.onclick = function (event) {
                                         bootstrap.Modal.getOrCreateInstance(editModal).show()
                                         currentTodoIndex = index
                                         editDateInput.value = `${year}-${month + 1}-${td.childNodes[0].data}`
                                         editTitleInput.value = item.title
-                                        
+
                                         event.stopPropagation()
                                     }
 
@@ -227,6 +255,26 @@
                     tr.append(td)
                 }
                 dateArea.append(tr)
+            }
+
+            let liCount = document.querySelectorAll('li').length
+            count.innerHTML = `<i class="fas fa-exclamation-circle"></i> 待辦事項: <button>${liCount}</button> 項`
+            let countBtn = document.querySelector('.count>button')
+            countBtn.classList.add('btn', 'btn-outline-danger')
+            countBtn.onclick = function () {
+                todoModalText.innerHTML = ''
+                bootstrap.Modal.getOrCreateInstance(todoModal).show()
+                
+                if (liCount != 0) {
+                    for (let i = 1; i < dayOfMonth; i++) {
+                        let todayTodo = localStorage.getItem(`${year}-${month + 1}-${i}`)
+
+                        if (localStorage.getItem(`${year}-${month + 1}-${i}`) != null && JSON.parse(localStorage.getItem(`${year}-${month + 1}-${i}`).length > 2)) {
+                            todoModalText.innerHTML += `${year}-${month + 1}-${i} 的: ${JSON.parse(todayTodo)[0].title}<br>`
+                            console.log(JSON.parse(todayTodo))
+                        }
+                    }
+                }
             }
         }
 
@@ -257,15 +305,13 @@
                 title: todoItem
             }
 
-            count.innerText = `待辦事項: ${todoObj.title}`
-
             let todoList = []
 
-            if(localStorage.getItem(date) == null){
+            if (localStorage.getItem(date) == null) {
                 //原本沒有行程
                 todoList.push(todoObj)
             }
-            else{
+            else {
                 //原本有行程
                 todoList = JSON.parse(localStorage.getItem(date))
                 todoList.push(todoObj)
@@ -276,12 +322,12 @@
             init()
         }
         //修改行程
-        function  editTodoItem() {
+        function editTodoItem() {
             let date = editDateInput.value
             let todoItem = editTitleInput.value
 
             let todoList = JSON.parse(localStorage.getItem(date))
-            todoList[currentTodoIndex] = { title: todoItem}
+            todoList[currentTodoIndex] = { title: todoItem }
 
             localStorage.setItem(date, JSON.stringify(todoList))
 
@@ -290,16 +336,21 @@
             init()
         }
         //刪除行程
-        function  deleteTodoItem() {
+        function deleteTodoItem() {
             let date = editDateInput.value
             let todoItem = editTitleInput.value
 
-            
+            console.log(date)
+            console.dir(todoItem)
             let todoList = JSON.parse(localStorage.getItem(date))
             todoList.splice(currentTodoIndex, 1)
-            
+
             localStorage.setItem(date, JSON.stringify(todoList))
 
+            // console.log(todoList)
+            // if(todoItem == ''){
+            //     localStorage.removeItem(date)
+            // }
             // localStorage.removeItem(date)
 
 
@@ -307,6 +358,7 @@
 
             init()
         }
+
     </script>
 
 </body>
