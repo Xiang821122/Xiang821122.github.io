@@ -269,9 +269,10 @@
                     for (let i = 1; i < dayOfMonth; i++) {
                         let todayTodo = localStorage.getItem(`${year}-${month + 1}-${i}`)
 
-                        if (localStorage.getItem(`${year}-${month + 1}-${i}`) != null && JSON.parse(localStorage.getItem(`${year}-${month + 1}-${i}`).length > 2)) {
-                            todoModalText.innerHTML += `${year}-${month + 1}-${i} 的: ${JSON.parse(todayTodo)[0].title}<br>`
-                            console.log(JSON.parse(todayTodo))
+                        if (todayTodo != null && JSON.parse(todayTodo.length > 2)) {
+                            JSON.parse(todayTodo).forEach(item=>{
+                                todoModalText.innerHTML += `${year}-${month + 1}-${i} 的: ${item.title}<br>`
+                            })
                         }
                     }
                 }
@@ -340,8 +341,6 @@
             let date = editDateInput.value
             let todoItem = editTitleInput.value
 
-            console.log(date)
-            console.dir(todoItem)
             let todoList = JSON.parse(localStorage.getItem(date))
             todoList.splice(currentTodoIndex, 1)
 
