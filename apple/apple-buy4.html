@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/resect.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <title>apple</title>
+    <style>
+        .sr-only {
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex justify-content-center align-items-center">
+        <a href="#" id="logo">
+            <h1><i class="fab fa-apple fs-1 text-dark me-5"></i><span class="sr-only">Apple</span></h1>
+        </a>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 product-pic"></div>
+            <div class="col-12 col-md-6 product-info"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+    <script>
+        const appleData = [
+            {
+                id: 1,
+                title: "iPadAir",
+                productImg: "/apple/pic/ipad-air-firstpic.jfif",
+                price: 18900,
+                exterior: [
+                    {
+                        color: 'graySpace',
+                        name: '太空灰',
+                        hex: '#B2B5B7',
+                        img: '/apple/pic/MicrosoftTeams-image4.png'
+                    },
+                    {
+                        color: 'silver',
+                        name: '銀色',
+                        hex: '#DEE0DF',
+                        img: '/apple/pic/MicrosoftTeams-image5.png'
+                    },
+                    {
+                        color: 'green',
+                        name: '綠色',
+                        hex: '#CDDECA',
+                        img: '/apple/pic/MicrosoftTeams-image3.png'
+                    },
+                    {
+                        color: 'roseGold',
+                        name: '玫瑰金色',
+                        hex: '#EBCAC3',
+                        img: '/apple/pic/MicrosoftTeams-image2.png'
+                    },
+                    {
+                        color: 'skyBlue',
+                        name: '天藍色',
+                        hex: '#C9D8E5',
+                        img: '/apple/pic/MicrosoftTeams-image.png'
+                    }
+                ],
+                spec: [
+                    {
+                        name: '儲存裝置',
+                        detail: [
+                            {
+                                name: '64GB',
+                                fit: 0
+                            },
+                            {
+                                name: '256GB',
+                                fit: 5000
+                            }
+                        ]
+                    },
+                    {
+                        name: '連線能力',
+                        detail: [
+                            {
+                                name: 'Wi-Fi',
+                                fit: 0
+                            },
+                            {
+                                name: 'Wi-Fi + 行動網路',
+                                fit: 4300
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 2,
+                title: "iPad mini",
+                productImg: "/apple/pic/ipad-mini-select-202109.jpg",
+                price: 14900,
+                exterior: [
+                    {
+                        color: 'graySpace',
+                        name: '太空灰',
+                        hex: '#B2B5B7',
+                        img: '/apple/pic/ipad-mini-select-wifi-space-gray-202109.png'
+                    },
+                    {
+                        color: 'pink',
+                        name: '粉紅色',
+                        hex: '#8762F2',
+                        img: '/apple/pic/ipad-mini-select-wifi-pink-202109.png'
+                    },
+                    {
+                        color: 'purple',
+                        name: '紫色',
+                        hex: '#BDBCD3',
+                        img: '/apple/pic/ipad-mini-select-wifi-purple-202109.png'
+                    },
+                    {
+                        color: 'starlight',
+                        name: '星光色',
+                        hex: '#E4DDD2',
+                        img: '/apple/pic/ipad-mini-select-wifi-starlight-202109.png'
+                    }
+                ],
+                spec: [
+                    {
+                        name: '儲存裝置',
+                        detail: [
+                            {
+                                name: '64GB',
+                                fit: 0
+                            },
+                            {
+                                name: '256GB',
+                                fit: 5000
+                            }
+                        ]
+                    },
+                    {
+                        name: '連線能力',
+                        detail: [
+                            {
+                                name: 'Wi-Fi',
+                                fit: 0
+                            },
+                            {
+                                name: 'Wi-Fi + 行動網路',
+                                fit: 4500
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 3,
+                title: "iPad",
+                productImg: "/apple/pic/ipad-2021-hero-landing-wifi.jpg",
+                price: 10500,
+                exterior: [
+                    {
+                        color: 'graySpace',
+                        name: '太空灰',
+                        hex: '#B2B5B7',
+                        img: '/apple/pic/ipad-2021-hero-space-wifi-select.png'
+                    },
+                    {
+                        color: 'silver',
+                        name: '銀色',
+                        hex: '#DEE0DF',
+                        img: '/apple/pic/ipad-2021-hero-silver-wifi-select.png'
+                    }
+                ],
+                spec: [
+                    {
+                        name: '儲存裝置',
+                        detail: [
+                            {
+                                name: '64GB',
+                                fit: 0
+                            },
+                            {
+                                name: '256GB',
+                                fit: 4500
+                            }
+                        ]
+                    },
+                    {
+                        name: '連線能力',
+                        detail: [
+                            {
+                                name: 'Wi-Fi',
+                                fit: 0
+                            },
+                            {
+                                name: 'Wi-Fi + 行動網路',
+                                fit: 4000
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+
+        window.onload = function () {
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
