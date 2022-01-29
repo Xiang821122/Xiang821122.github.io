@@ -29,8 +29,17 @@
             background-color: transparent;
         }
 
-        li {
-            list-style: decimal;
+        ol{
+            margin-bottom: 0;
+            padding: 0 0 0 18px;
+            width: -moz-fit-content;
+            width: -webkit-fit-content;
+            width: fit-content;
+            margin: auto;
+        }
+
+        td{
+            width: 1px;
         }
 
         .count i {
@@ -217,8 +226,8 @@
                             td.classList.add('bg-primary', 'bg-opacity-10')
 
                             if (localStorage.getItem(`${year}-${month + 1}-${day}`) != null) {
-                                let ul = document.createElement('ul')
-                                ul.classList.add('bg-danger', 'bg-opacity-10')
+                                let ol = document.createElement('ol')
+                                ol.classList.add('bg-danger', 'bg-opacity-10')
 
                                 let todoList = JSON.parse(localStorage.getItem(`${year}-${month + 1}-${day}`))
                                 todoList.forEach((item, index) => {
@@ -234,9 +243,9 @@
                                         event.stopPropagation()
                                     }
 
-                                    ul.append(li)
+                                    ol.append(li)
                                 })
-                                td.append(ul)
+                                td.append(ol)
                             }
 
                             td.onclick = function () {
