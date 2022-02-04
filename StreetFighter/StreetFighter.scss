@@ -1,0 +1,76 @@
+body {
+    background-image: url(pic/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+.p1 {
+    position: relative;
+    padding: 0;
+    background-color: rgba(0, 91, 209, 0.5);
+    border: solid 2px blue;
+}
+.p2 {
+    position: relative;
+    padding: 0;
+    background-color: rgba(209, 0, 0, 0.5);
+    border: solid 2px red;
+}
+.col-5 p {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: rgb(151, 141, 0);
+    top: 0;
+}
+[boxP1-id] {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgb(151, 141, 0); 
+    transition: 0.3s;
+    padding: 0px;
+    margin: 0 2px;
+}
+[boxP1-id].active {
+    border: solid 5px blue;
+    box-shadow: 0 0 20px blue;
+    transition: 0s;
+}
+[boxP2-id] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: solid 2px rgb(151, 141, 0); 
+    transition: 0.3s;
+    padding: 0px;
+    margin: 0 2px;
+}
+[boxP2-id].active {
+    border: solid 5px red;
+    box-shadow: 0 0 20px red;
+    transition: 0s;
+}
+.modal-header{
+    background-color: #a8dadc;
+    color: #1d3557;
+}
+.modal-body{
+    background-color: #f1faee;
+}
+.modal-footer{
+    background-color: #457b9d;
+}
+.btn-secondary{
+    background-color: #e63946 !important; 
+}
+.duel-result{
+    font-weight: bolder;
+    color: #1d3557;
+}
