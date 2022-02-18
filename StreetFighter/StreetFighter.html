@@ -287,7 +287,29 @@
         window.onload = function () {
 
             p1Img.src = '/StreetFighter/pic/nothing.png'
+            p1Img.setAttribute('target', '0')
+            p1Img.style.zIndex = 2
             p2Img.src = '/StreetFighter/pic/nothing.png'
+            p2Img.setAttribute('target', '0')
+            p2Img.style.zIndex = 2
+
+            roleData.forEach(x => {
+                let img1 = document.createElement('img')
+                img1.src = x.bigImg
+                img1.style.zIndex = 0
+                img1.classList.add('d-none')
+                img1.setAttribute('target', x.id)
+
+                let img2 = document.createElement('img')
+                img2.src = x.bigImg
+                img2.style.zIndex = 0
+                img2.classList.add('d-none')
+                img2.setAttribute('target', x.id)
+
+                p1Div.append(img1)
+                p2Div.append(img2)
+            })
+
             p1Div.append(p1Img)
             p2Div.append(p2Img)
 
@@ -303,6 +325,9 @@
             })
             //隨機選角
             chooseBtn.onclick = function () {
+                p1Img.classList.add('d-none')
+
+
                 p1Speed = 100
                 p2Speed = 100
 
@@ -318,10 +343,10 @@
 
                 p1TurnAround()
             }
-            p1Btn.onclick = function(){
+            p1Btn.onclick = function () {
                 alert(p1Compare)
             }
-            p2Btn.onclick = function(){
+            p2Btn.onclick = function () {
                 alert(p2Compare)
             }
         }
@@ -336,22 +361,34 @@
             p1Roles[p1currentIndex].classList.add('active')
             p1Steps--
 
+            // p1Img.src = roleData[p1currentIndex].bigImg
+            Array.from(document.querySelectorAll('.p1 > [target]')).forEach(x => {
+                x.style.zIndex = 0
+                x.classList.add('d-none')
+            })
+            document.querySelector(`.p1 > [target="${p1currentIndex + 1}"]`).style.zIndex = 2
+
+            document.querySelector(`.p1 > [target="${p1currentIndex + 1}"]`).classList.remove('d-none')
+
+            p1NameShow.innerText = roleData[p1currentIndex].name
+
             if (p1Steps > 0) {
                 chooseBtn.setAttribute('disabled', 'ture')
-                p1Img.src = roleData[p1currentIndex].bigImg
-                p1NameShow.innerText = roleData[p1currentIndex].name
+                //p1Img.src = roleData[p1currentIndex].bigImg
+                //p1NameShow.innerText = roleData[p1currentIndex].name
 
-                p1Div.append(p1Img, p1NameShow)
+                p1Div.append(p1NameShow)
                 setTimeout(p1TurnAround, p1Speed)
 
-                if(p1Steps < Math.floor((p1AllSteps / 3))){
+                if (p1Steps < Math.floor((p1AllSteps / 3))) {
                     p1Speed += 20
                 }
             }
             else {
                 p2TurnAround()
-                p1Img.src = roleData[p1currentIndex].bigImg
-                p1NameShow.innerText = roleData[p1currentIndex].name
+                p2Img.classList.add('d-none')
+                //p1Img.src = roleData[p1currentIndex].bigImg
+                //p1NameShow.innerText = roleData[p1currentIndex].name
 
                 p1Compare = roleData[p1currentIndex].target()
                 p1Div.append(p1Img, p1NameShow)
@@ -369,20 +406,28 @@
             p2Roles[p2currentIndex].classList.add('active')
             p2Steps--
 
+            Array.from(document.querySelectorAll('.p2 > [target]')).forEach(x => {
+                x.style.zIndex = 0
+                x.classList.add('d-none')
+            })
+
+            document.querySelector(`.p2 > [target="${p2currentIndex + 1}"]`).style.zIndex = 2
+
+            document.querySelector(`.p2 > [target="${p2currentIndex + 1}"]`).classList.remove('d-none')
             if (p2Steps > 0) {
-                p2Img.src = roleData[p2currentIndex].bigImg
+
                 p2NameShow.innerText = roleData[p2currentIndex].name
 
-                p2Div.append(p2Img, p2NameShow)
+                p2Div.append(p2NameShow)
                 setTimeout(p2TurnAround, p2Speed)
 
-                if(p2Steps < Math.floor((p2AllSteps / 3))){
+                if (p2Steps < Math.floor((p2AllSteps / 3))) {
                     p2Speed += 20
                 }
             }
             else {
                 chooseBtn.removeAttribute('disabled')
-                p2Img.src = roleData[p2currentIndex].bigImg
+                document.querySelector(`.p2 > [target="${p2currentIndex + 1}"]`).style.zIndex = 2
                 p2NameShow.innerText = roleData[p2currentIndex].name
 
                 p2Compare = roleData[p2currentIndex].target()
@@ -408,8 +453,8 @@
                     duelResult.innerText = '2P Win!'
                 }
             }
-            else if (p1Compare === 'stone'){
-                if(p2Compare === 'scissor'){
+            else if (p1Compare === 'stone') {
+                if (p2Compare === 'scissor') {
                     bootstrap.Modal.getOrCreateInstance(duel).show()
                     duelResult.innerText = '1P Win!'
                 }
@@ -418,8 +463,8 @@
                     duelResult.innerText = '2P Win!'
                 }
             }
-            else if (p1Compare === 'scissor'){
-                if(p2Compare === 'paper') {
+            else if (p1Compare === 'scissor') {
+                if (p2Compare === 'paper') {
                     bootstrap.Modal.getOrCreateInstance(duel).show()
                     duelResult.innerText = '1P Win!'
                 }
